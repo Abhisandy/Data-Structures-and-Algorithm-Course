@@ -7,7 +7,7 @@ int Coins(vector<int> v, int s, int e){
          return max(v[s], v[e]);
     } 
     
-    int first = v[s] + min( Coins(v, s+2, e) , Coins(v, s+1, e-1) );
+    int first = v[s] + min( Coins(v, s+2, e) , Coins(v, s+1, e-1) );   //taking min here coz max will be taken by opponent
     int second = v[e] + min( Coins(v, s+1, e-1) , Coins(v, s, e-2) );
     
     return max(first, second);
