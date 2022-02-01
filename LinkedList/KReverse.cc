@@ -48,8 +48,8 @@ node * KreverseLL(node *&head, int k){
 		current =  temp;
 		cnt++;
 	}
-	if(temp!=NULL){
-		head->next = KreverseLL(temp, k);				
+	if(temp!=NULL){                    //coz temp will point to next node when update, so here we are checking
+		head->next = KreverseLL(temp, k);  //wheather is it end of LinkedList or not 				
 	}
 	return prev;
 }
