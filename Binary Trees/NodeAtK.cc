@@ -58,6 +58,7 @@ void printAtLevelK(node * root, int k){
 	}
 	if(k==0){
 		cout<<root->data<<" ";
+		return;
 	}
 	printAtLevelK(root->left, k-1);
 	printAtLevelK(root->right, k-1);
